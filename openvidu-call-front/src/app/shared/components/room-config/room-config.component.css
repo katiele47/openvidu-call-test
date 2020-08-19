@@ -1,5 +1,6 @@
 .cardHeader {
-  background-color: #cccccc;
+  background-color: #49cdd4;
+  color: white;
   border-radius: 14px 14px 0px 0px;
   text-align: center;
   height: 50px;
@@ -156,7 +157,7 @@
 
 #avatarContainer,
 #avatarImg {
-  border-radius: 25%;
+  border-radius: 50%;
 }
 
 #optionsContent {
@@ -1018,6 +1019,8 @@ mat-card {
   padding: 1px;
   text-align: center;
   border-top: 1px solid #e5e5e5;
+  width: 30rem;
+  margin-left: 19rem;
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;
@@ -1026,6 +1029,17 @@ mat-card {
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
+.modal-footer--btn {
+  background-color: coral;
+  color: white;
+  font-size: 1.4rem;
+  height: 3.5rem;
+  border-radius: 3rem;
+}
+.modal-footer--btn:hover {
+  background-color: rgb(233, 84, 30);
+}
+
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }

@@ -1,8 +1,8 @@
 #header {
   color: #ffffff;
-  height: 40px;
-  background-color: #333333;
-  padding: 0 14px 0 0;
+  height: 3.3rem;
+  background-color: #49cdd4;
+  padding: .3rem 1.4rem 0 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -34,9 +34,12 @@
 #navChatButton .mat-badge-medium.mat-badge-above .mat-badge-content {
   top: -6px;
 }
-
 .mat-icon-button[disabled] {
   color: #fff;
+}
+.mat-icon {
+  font-size: 2rem;
+
 }
 
 .titleContent {

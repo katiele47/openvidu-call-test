@@ -7,16 +7,16 @@
         <!-- Modal Header -->
         <div class="modal-header cardHeader">
 			<div class="headerLogo">
-				<img
+				<!-- <img
 					id="header_img"
-					alt="OpenVidu Logo"
-					src="https://raw.githubusercontent.com/OpenVidu/openvidu-call/master/openvidu-call-front/src/assets/images/openvidu_logo_grey.png"
-				/>
+					alt="MyTin-PNC Logo"
+					[src]="pncLogo"
+				/> -->
 			</div>
 			<h3 class="headerTitle">{{ mySessionId }}</h3>
 
 			<button mat-mini-fab (click)="close()" class="closeButton" id="closeButton">
-				<mat-icon color="warn" matTooltip="Close">highlight_off</mat-icon>
+				<mat-icon color="primary" matTooltip="Close">highlight_off</mat-icon>
 			</button>
         </div>
 
@@ -57,14 +57,14 @@
 				<div class="avatarButton" *ngIf="hasVideoDevices">
 					<button mat-stroked-button (click)="takePhoto()">
 						<mat-icon matTooltip="Take Photo">photo_camera</mat-icon>
-						<span style="margin-left: 5px;">Capture Avatar</span>
+						<span style="margin-left: 5px;">Chụp ảnh đại diện</span>
 					</button>
 				</div>
 			</div>
 
 			<div class="col-sm-6 col-md-6 col-lg-6 rightSection">
 				<div class="avatarContainer" *ngIf="hasVideoDevices">
-					<h3>Avatar</h3>
+					<h3>Chọn ảnh đại diện</h3>
 
 				</div>
 
@@ -80,10 +80,11 @@
 							[style.background]="avatarSelected === 'video' ? 'lightgreen' : 'transparent'"
 						>
 							<div id="imgText" *ngIf="!videoAvatar">
-								<span>Press Avatar Button</span>
+								<span>Nhấn nút chụp ảnh</span>
 							</div>
 							<img id="avatarImg" *ngIf="videoAvatar" [src]="videoAvatar" />
 						</div>
+						<p>hoặc</p>
 						<div
 							id="avatarContainer"
 							(click)="setAvatar('random')"
@@ -139,7 +140,7 @@
 						<div class="two" fxFlex="80" fxLayoutAlign="center center">
 							<mat-form-field class="alternate-theme">
 								<mat-select
-									placeholder="Microphone Options"
+									placeholder="Chọn Microphone"
 									[ngModel]="isAudioActive && micSelected ? micSelected.device : 'None'"
 									(selectionChange)="onMicrophoneSelected($event)"
 								>
@@ -163,7 +164,7 @@
 						<div class="two" fxFlex="80" fxLayoutAlign="center center">
 							<mat-form-field class="alternate-theme">
 								<mat-select
-									placeholder="Camera Options"
+									placeholder="Chọn Camera"
 									[ngModel]="isVideoActive && camSelected ? camSelected.device : 'None'"
 									(selectionChange)="onCameraSelected($event)"
 								>
@@ -198,7 +199,7 @@
 								<input
 									matInput
 									disabled
-									placeholder="Screen"
+									placeholder="Chia Sẻ Màn Hình"
 									[ngModel]="screenShareEnabled ? 'Screen' : 'None'"
 								/>
 							</mat-form-field>
@@ -212,8 +213,7 @@
 
         <!-- Modal footer -->
         <div class="modal-footer" style="justify-content: center">
-			<button mat-flat-button color="accent" (click)="joinSession()" form="nicknameForm" id="joinButton">JOIN</button>
-
+			<button mat-flat-button class="modal-footer--btn" color="accent" (click)="joinSession()" form="nicknameForm" id="joinButton">GỌI</button>
         </div>
 
       </div>

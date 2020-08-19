@@ -3,8 +3,9 @@
   position: absolute;
   z-index: 999;
   border-radius: 5px;
+  margin-top: 1rem;
   color: #ffffff;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 .nicknameContainer {
   background-color: #424242;
@@ -65,11 +66,12 @@ video {
 }
 
 .statusIcons mat-icon {
-  font-size: 20px;
+  font-size: 3.8rem;
 }
 
 .videoButtons mat-icon {
-  font-size: 24px;
+  font-size: 38px;
+  margin-left: -16px;
 }
 .videoButtons .mat-icon-button{
   line-height: 0px;
@@ -89,17 +91,17 @@ video {
 }
 
 .videoButtons{
-  right: 0;
+  bottom: 4rem;
+  right: 3rem;
   position: absolute;
-  bottom: 0;
   z-index: 10;
   width: 50px;
   text-align: center;
 }
 .videoButtons button {
-  background-color: #000000;
-  width: 30px;
-  height: 30px;
+  background-color: #333333;
+  width: 4rem;
+  height: 4rem;
   margin: 1px;
 
 }

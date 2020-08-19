@@ -7,7 +7,7 @@ import { Publisher } from 'openvidu-browser';
 import { ActivatedRoute, Params } from '@angular/router';
 import { IDevice, CameraType } from '../../types/device-type';
 import { DevicesService } from '../../services/devices/devices.service';
-import { Subscription } from 'rxjs';
+import { Subscription, from } from 'rxjs';
 import { AvatarType } from '../../types/chat-type';
 import { LoggerService } from '../../services/logger/logger.service';
 import { ILogger } from '../../types/logger-type';
@@ -20,6 +20,7 @@ import { OpenViduErrorName } from 'openvidu-browser/lib/OpenViduInternal/Enums/O
 import { OpenViduWebrtcService } from '../../services/openvidu-webrtc/openvidu-webrtc.service';
 import { LocalUsersService } from '../../services/local-users/local-users.service';
 import { TokenService } from '../../services/token/token.service';
+// import {logo} from '../../../../assets/images/pncLogo';
 
 @Component({
 	selector: 'app-room-config',
@@ -51,6 +52,7 @@ export class RoomConfigComponent implements OnInit, OnDestroy {
 	videoAvatar: string;
 	avatarSelected: AvatarType;
 	columns: number;
+	// pncLogo = logo;
 
 	nicknameFormControl = new FormControl('', [Validators.maxLength(25), Validators.required]);
 	matcher = new NicknameMatcher();
@@ -277,7 +279,7 @@ export class RoomConfigComponent implements OnInit, OnDestroy {
 	}
 
 	private setRandomAvatar() {
-		this.randomAvatar = this.utilsSrv.getOpenViduAvatar();
+		this.randomAvatar = "https://cdn4.iconfinder.com/data/icons/business-square-gradient-shadow-2/512/xxx012-512.png";
 		this.localUsersService.setAvatar(AvatarType.RANDOM, this.randomAvatar);
 		this.avatarSelected = AvatarType.RANDOM;
 	}
